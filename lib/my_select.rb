@@ -4,7 +4,9 @@ def my_select(c)
     result = []
     while i < c.length
       value = yield c[i]
-      result << value
+      if value == true
+        result << c[i]
+      end
       i += 1
     end
     return result
